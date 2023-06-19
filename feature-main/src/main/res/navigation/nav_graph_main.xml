@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/categoryScreen">
+
+    <fragment
+        android:id="@+id/categoryScreen"
+        android:name="com.sultandev.feature_category.presentation.CategoryScreen"
+        android:label="CategoryScreen"
+        tools:layout="@layout/screen_category"
+        >
+
+        <action
+            android:id="@+id/action_categoryScreen_to_productScreen"
+            app:destination="@id/productScreen" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/basketScreen"
+        android:name="com.sultandev.feature_basket.presentation.BasketScreen"
+        android:label="BasketScreen"
+        tools:layout="@layout/screen_basket"
+        />
+
+    <fragment
+        android:id="@+id/productScreen"
+        android:name="com.sultandev.feature_product.presentation.ProductScreen"
+        android:label="ProductScreen"
+        tools:layout="@layout/screen_product"
+        />
+
+</navigation>

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply from: '../library.gradle'
+
+dependencies {
+
+    implementation project(Modules.core_network)
+    implementation project(Modules.core_util)
+
+    implementation Libs.ktx
+    implementation Libs.appcompat
+    implementation Libs.constraint_layout
+    implementation Libs.gson
+    implementation Libs.koin
+    implementation Libs.material
+    implementation Libs.retrofit
+    implementation Libs.recycler_view
+    implementation Libs.fragment
+    implementation Libs.kirich_full
+    implementation Libs.kirich_noreflection
+    implementation Libs.glide
+    implementation Libs.viewmodel_ktx
+
+}

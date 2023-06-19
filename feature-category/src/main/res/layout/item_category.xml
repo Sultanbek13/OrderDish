@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/rd_standard"
+    android:layout_marginHorizontal="@dimen/margin_standard"
+    android:layout_marginVertical="@dimen/margin_small"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dish"
+            android:scaleType="centerCrop"
+            />
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nameCategory"
+            android:layout_width="191dp"
+            android:layout_height="50dp"
+            tools:text="Пекарни и кондититерские"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_category"
+            android:fontFamily="@font/font_style_regular"
+            android:layout_marginHorizontal="@dimen/margin_standard"
+            android:layout_marginVertical="@dimen/margin_middle"
+            android:layout_alignParentTop="true"
+            />
+        
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EffTestingApp</string>
+    <string name="main">Главная</string>
+    <string name="search">Поиск</string>
+    <string name="basket">Карзина</string>
+    <string name="profile">Аккаунт</string>
+    <string name="add_the_basket">Добавить в карзину</string>
+    <string name="pay">Оплатить</string>
+</resources>

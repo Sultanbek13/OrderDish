@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply from: '../library.gradle'
+
+android {
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://run.mocky.io/v3/\""
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://run.mocky.io/v3/\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    implementation Libs.koin
+    implementation Libs.retrofit
+    implementation Libs.retrofit_gson
+    implementation Libs.okhttp_logging
+}

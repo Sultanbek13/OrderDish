@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply from: '../library.gradle'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation "androidx.room:room-runtime:2.5.1"
+    implementation "androidx.room:room-ktx:2.5.1"
+    kapt "androidx.room:room-compiler:2.5.1"
+    implementation Libs.koin
+    implementation Libs.koin_core
+}
