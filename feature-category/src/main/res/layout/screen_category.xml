@@ -58,6 +58,15 @@
             </LinearLayout>
 
         </LinearLayout>
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/circle_user"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:padding="@dimen/margin_small_small" />
 
     </RelativeLayout>
 

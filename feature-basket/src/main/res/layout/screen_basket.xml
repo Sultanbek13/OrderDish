@@ -7,13 +7,79 @@
     android:background="@color/white"
     >
 
+    <RelativeLayout
+        android:id="@+id/rlUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_standard"
+        android:layout_marginVertical="@dimen/margin_small"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_location"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_gravity="center_vertical"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_location"
+                    android:fontFamily="@font/font_style"
+                    android:layout_marginBottom="@dimen/margin_small_small"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/gray_color_per_percent"
+                    android:textSize="@dimen/text_size_date"
+                    android:layout_marginBottom="@dimen/margin_small_small"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/circle_user"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:padding="@dimen/margin_small_small" />
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBasket"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rlUserInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="4"
+        tools:itemCount="6"
         tools:listitem="@layout/item_basket"
         />
 

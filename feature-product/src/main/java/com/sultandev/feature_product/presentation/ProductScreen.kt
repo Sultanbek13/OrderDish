@@ -74,6 +74,9 @@ internal class ProductScreen : Fragment(R.layout.screen_product) {
             dialog?.dismiss()
             viewModel.onAddBasket(product)
         }
+        (dialog as ProductDetailDialog).setOnDismissDialog {
+            dialog?.dismiss()
+        }
         dialog?.show()
     }
 

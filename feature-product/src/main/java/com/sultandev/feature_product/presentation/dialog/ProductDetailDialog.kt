@@ -17,8 +17,14 @@ internal class ProductDetailDialog(context: Context, private val product: Produc
 
     private var onClickAddBasket: (() -> Unit)? = null
 
+    private var onDismissDialog: (() -> Unit)? = null
+
     fun setOnClickAddBasketListener(block: () -> Unit) {
         onClickAddBasket = block
+    }
+
+    fun setOnDismissDialog(block: () -> Unit) {
+        onDismissDialog = block
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +45,10 @@ internal class ProductDetailDialog(context: Context, private val product: Produc
             tvPriceProduct.text = product.price.toString().toRub()
             tvWeightProduct.text = product.weight.toString().toWight()
             tvRecipeProduct.text = product.description
+
+            dismiss.setOnClickListener {
+                onDismissDialog?.invoke()
+            }
 
             addBasket.setOnClickListener {
                 onClickAddBasket?.invoke()
